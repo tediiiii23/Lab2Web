@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Praktikum 2: HTML Lanjutan</title>
+</head>
+<body>
+
+    <!-- 1. MEMBUAT TABEL DATA MAHASISWA -->
+    <h1>Data Mahasiswa</h1>
+    <table border="1">
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Program Studi</th>
+        </tr>
+        <tr>
+            <td>31241001</td>
+            <td>Andi</td>
+            <td>Teknik Informatika</td>
+        </tr>
+        <tr>
+            <td>31241002</td>
+            <td>Budi</td>
+            <td>Teknik Informatika</td>
+        </tr>
+        <tr>
+            <td>31241003</td>
+            <td>Cici</td>
+            <td>Sistem Informasi</td>
+        </tr>
+    </table>
+
+    <br><hr><br>
+
+    <!-- 2. MENGEMBANGKAN TABEL DENGAN thead, tbody, DAN tfoot -->
+    <table border="1">
+        <caption>Nilai Praktikum</caption>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Andi</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Budi</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Rata-rata</td>
+                <td>87.5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br><hr><br>
+
+    <!-- 3. MEMBUAT FORM REGISTRASI MAHASISWA -->
+    <h1>Form Registrasi Mahasiswa</h1>
+    <form>
+        <label for="nama_reg">Nama Lengkap</label><br>
+        <input type="text" id="nama_reg" name="nama"><br><br>
+
+        <label for="email_reg">Email</label><br>
+        <input type="email" id="email_reg" name="email"><br><br>
+
+        <label for="password_reg">Password</label><br>
+        <input type="password" id="password_reg" name="password"><br><br>
+
+        <label for="tanggal_reg">Tanggal Lahir</label><br>
+        <input type="date" id="tanggal_reg" name="tanggal"><br><br>
+
+        <button type="submit">Daftar</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <br><hr><br>
+
+    <!-- 4. RADIO BUTTON DAN CHECKBOX -->
+    <h2>Jenis Kelamin</h2>
+    <input type="radio" id="laki" name="jk" value="L">
+    <label for="laki">Laki-laki</label>
+    <input type="radio" id="perempuan" name="jk" value="P">
+    <label for="perempuan">Perempuan</label>
+
+    <h2>Keahlian</h2>
+    <input type="checkbox" id="html" name="skill" value="HTML">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="skill" value="CSS">
+    <label for="css">CSS</label>
+    <input type="checkbox" id="js" name="skill" value="JavaScript">
+    <label for="js">JavaScript</label>
+
+    <br><hr><br>
+
+    <!-- 5. SELECT DAN TEXTAREA -->
+    <label for="prodi_opt">Program Studi</label>
+    <select id="prodi_opt" name="prodi">
+        <option value="">-- Pilih Prodi --</option>
+        <option value="ti">Teknik Informatika</option>
+        <option value="si">Sistem Informasi</option>
+    </select>
+    <br><br>
+
+    <label for="alamat_opt">Alamat</label><br>
+    <textarea id="alamat_opt" name="alamat" rows="5" cols="40"></textarea>
+
+    <br><hr><br>
+
+    <!-- 6. VALIDASI FORM DASAR -->
+    <h2>Form Validasi Dasar</h2>
+    <form>
+        <label for="nama_val">Nama</label>
+        <input type="text" id="nama_val" name="nama" required minlength="3">
+        <br><br>
+
+        <label for="email_val">Email</label>
+        <input type="email" id="email_val" name="email" required>
+        <br><br>
+
+        <label for="umur_val">Umur</label>
+        <input type="number" id="umur_val" name="umur" min="17" max="60" required>
+        <br><br>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <br><hr><br>
+
+    <!-- 7. MEMBUAT HALAMAN SEMANTIC HTML -->
+    <header>
+        <h1>Portal Mahasiswa</h1>
+    </header>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Profil</a>
+        <a href="#">Kontak</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Informasi Akademik</h2>
+            <article>
+                <h3>Praktikum HTML Lanjutan</h3>
+                <p>Mahasiswa mempelajari tabel, form, semantic HTML, multimedia, dan validasi.</p>
+            </article>
+        </section>
+        <aside>Informasi tambahan mahasiswa.</aside>
+    </main>
+    <footer>
+        <p>&copy; 2026 Teknik Informatika</p>
+    </footer>
+
+    <br><hr><br>
+
+    <!-- 8. MENAMBAHKAN MULTIMEDIA -->
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="media/audio.mp3" type="audio/mpeg">
+        Browser tidak mendukung audio.
+    </audio>
+
+    <h2>Video</h2>
+    <video controls width="480">
+        <source src="media/video.mp4" type="video/mp4">
+        Browser tidak mendukung video.
+    </video>
+
+    <br><hr><br>
+
+    <!-- 9. PROYEK MINI: FORM BIODATA MAHASISWA -->
+    <header>
+        <h1>Biodata Mahasiswa</h1>
+    </header>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#form">Form</a>
+    </nav>
+    <main>
+        <section id="biodata">
+            <h2>Data Mahasiswa</h2>
+            <table border="1">
+                <tr>
+                    <th>Data</th>
+                    <th>Keterangan</th>
+                </tr>
+                <tr>
+                    <td>NIM</td>
+                    <td>312510163</td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td>Tedi Mulyadi</td>
+                </tr>
+                <tr>
+                    <td>Program Studi</td>
+                    <td>Teknik Informatika</td>
+                </tr>
+            </table>
+        </section>
+        <section id="form">
+            <h2>Form Biodata</h2>
+            <form>
+                <label for="nama_bio">Nama</label>
+                <input type="text" id="nama_bio" name="nama" required>
+                <br><br>
+
+                <label for="email_bio">Email</label>
+                <input type="email" id="email_bio" name="email" required>
+                <br><br>
+
+                <label for="prodi_bio">Program Studi</label>
+                <select id="prodi_bio" name="prodi" required>
+                    <option value="">-- Pilih --</option>
+                    <option value="ti">Teknik Informatika</option>
+                    <option value="si">Sistem Informasi</option>
+                </select>
+                <br><br>
+
+                <label for="alamat_bio">Alamat</label><br>
+                <textarea id="alamat_bio" name="alamat" required></textarea>
+                <br><br>
+
+                <button type="submit">Simpan</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Teknik Informatika</p>
+    </footer>
+
+</body>
+</html>
